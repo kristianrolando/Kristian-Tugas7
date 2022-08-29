@@ -8,6 +8,6 @@ Yang perlu dioptimalkan.
 * spawn object yang terus terusan create new object, cara fix : object pooling
 * draw call yang kuran optimaze, object dengan material yg sama akan lebih baik di merge dengan metode static batching
 
-![Gambar teks editor VS Code]([https://www.petanikode.com/img/markdown/markdown-vscode.png](https://github.com/kristianrolando/Kristian-Tugas7/tree/main/Screenshoot/Compare/compare_audio.png))
 
-![Gambar teks editor VS Code]([https://www.petanikode.com/img/markdown/markdown-vscode.png](https://github.com/kristianrolando/Kristian-Tugas7/tree/main/Screenshoot/Compare/compare_statistics.png))
+![compare_audio](https://user-images.githubusercontent.com/101899403/187155671-329cd857-09bb-41bd-8ab6-a0173ee78df7.png)
+![compare_statistics](https://user-images.githubusercontent.com/101899403/187155677-19703872-6055-4c98-a434-c531d9966cc8.png)
