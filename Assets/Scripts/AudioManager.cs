@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] private List<AudioSource> _bgmAudioSource;
+    [SerializeField]
+    string[] nameOfClip;
     public bool isAudioEnabled = false;
-     private static AudioManager _instance;
+    private static AudioManager _instance;
+    private AudioSource source;
 
     public static AudioManager Instance { get { return _instance; } }
     private void Awake() 
-    {   
-       if (_instance != null && _instance != this)
+    {
+        source = GetComponent<AudioSource>();
+
+        if(_instance != null && _instance != this)
         {
             Destroy(this.gameObject);
         } else {
@@ -21,6 +25,8 @@ public class AudioManager : MonoBehaviour
     }
     public void PlayBgm()
     {
-        _bgmAudioSource[Random.Range(0, _bgmAudioSource.Count)].Play();
+        int ran = Random.Range(0, nameOfClip.Length);
+        source.clip = Resources.Load<AudioClip>("BGM/" + nameOfClip[ran]);
+        source.Play();
     }
 }
